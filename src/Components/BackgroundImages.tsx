@@ -1,6 +1,6 @@
 //@ts-nocheck
 import React, { useState, useEffect } from 'react'
-// import Image from 'Image'
+import Image from './Image'
 // import api from '../utils/api'
 
 const BackgroundImages = ({ setImage, type }) => {
