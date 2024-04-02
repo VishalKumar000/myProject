@@ -59,7 +59,23 @@ const Element = ({ id, info, exId }) => {
       ></div>
       <div
         onMouseDown={() => info.moveElement(id, info)}
-        className="hidden absolute group-hover:block top-0 left-0 right-0 bottom-0 w-full h-full cursor-move z-[99998] "
+        className="hidden absolute group-hover:block top-0 left-[50%] w-full h-[1px] cursor-move z-[99998] bg-blue-500"
+        style={{transform: "translate(-50%, -50%)"}}
+      ></div>
+      <div
+        onMouseDown={() => info.moveElement(id, info)}
+        className="hidden absolute group-hover:block bottom-[-2px] left-[50%] w-full h-[1px] cursor-move z-[99998] bg-blue-500"
+        style={{transform: "translate(-50%, -50%)"}}
+      ></div>
+      <div
+        onMouseDown={() => info.moveElement(id, info)}
+        className="hidden absolute group-hover:block left-0 top-[50%] w-[1px] h-full cursor-move z-[99998] bg-blue-500"
+        style={{transform: "translate(-50%, -50%)"}}
+      ></div>
+      <div
+        onMouseDown={() => info.moveElement(id, info)}
+        className="hidden absolute group-hover:block right-[-2px] top-[50%] w-[1px] h-full cursor-move z-[99998] bg-blue-500"
+        style={{transform: "translate(-50%, -50%)"}}
       ></div>
       {/* <div
         onMouseDown={() => info.moveElement(id, info)}
