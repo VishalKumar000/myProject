@@ -41,7 +41,7 @@ const NewApproach = () => {
       lockScalingX: false, // Allow horizontal resizing
       lockScalingY: false, // Allow vertical resizing
       borderColor: 'black', // Set border color
-      cornerColor: 'blue', // Set corner color
+      cornerColor: 'transparent', // Set corner color
       cornerSize: 10, // Set corner size
       transparentCorners: false 
     });
