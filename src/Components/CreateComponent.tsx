@@ -3,7 +3,9 @@
 import React from "react";
 import { BsTrash } from "react-icons/bs";
 import Element from "./Element";
+import { useCustomization } from "../Contexts/Customization";
 const CreateComponente = ({ info, current_component, removeComponent }) => {
+  const { setCurrentComponent, setText } = useCustomization();
   const randValue = Math.floor(Math.random() * 100);
   let html = "";
 
@@ -130,28 +132,35 @@ const CreateComponente = ({ info, current_component, removeComponent }) => {
     html = (
       <div
         id={randValue}
-        onClick={() => info.setCurrentComponent(info)}
+        // onClick={() => }
         style={{
           left: info.left + "px",
           top: info.top + "px",
           zIndex: info.z_index,
           transform: info.rotate ? `rotate(${info.rotate}deg)` : "rotate(0deg)",
-          padding: info.padding + "px",
+          // padding: info.padding + "px",
           color: info.color,
           opacity: info.opacity,
         }}
         className="absolute group hover:border-[2px] hover:border-indigo-500"
       >
         <Element id={randValue} info={info} exId="" />
-        <h2
+        <input
           style={{
             fontSize: info.font + "px",
             fontWeight: info.weight,
           }}
-          className="w-full h-full"
-        >
-          {info.title}
-        </h2>
+          className="w-full h-full outline-none border-none"
+          onChange={(e) => {
+            setCurrentComponent({
+              ...current_component,
+              title: e.target.value,
+            });
+            setText(e.target.value);
+            info.setCurrentComponent(info);
+          }}
+          placeholder={info.title}
+        />
         {current_component.id === info.id && (
           <div
             onClick={() => removeComponent(info.id)}

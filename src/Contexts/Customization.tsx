@@ -40,6 +40,8 @@ const CustomizationContext = createContext({});
 
 export const CustomizationProvider = (props) => {
   const [color, setColor] = useState(Colors[0]);
+  const [current_component, setCurrentComponent] = useState('')
+  const [text, setText] = useState('')
   const [image, setimage] = useState({
     map: "../Textures/Plastic/Plastic_003_height.jpg",
     displacementMap: "../Textures/Plastic/Plastic_003_height.jpg",
@@ -48,7 +50,7 @@ export const CustomizationProvider = (props) => {
     aoMap: "../Textures/Plastic/Plastic_003_ambientOcclusion.jpg",
   });
   return (
-    <CustomizationContext.Provider value={{ color, setColor, image, setimage }}>
+    <CustomizationContext.Provider value={{ color, setColor, image, setimage, current_component, setCurrentComponent , text, setText}}>
       {props.children}
     </CustomizationContext.Provider>
   );
