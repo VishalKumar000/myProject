@@ -9,22 +9,22 @@ const Element = ({ id, info, exId }) => {
         <>
           <div
             onMouseDown={() => info.resizeElement(exId, info)}
-            className="hidden absolute group-hover:block -bottom-[3px] -right-[3px] w-[10px] h-[10px] cursor-nwse-resize bg-green-500 z-[99999] "
+            className="hidden absolute group-hover:block -bottom-[3px] -right-[3px] w-[7px] h-[7px] cursor-nwse-resize bg-green-500 z-[99999] "
           ></div>
           <div
             onMouseDown={() => info.resizeElement(exId, info)}
-            className="hidden absolute group-hover:block -top-[3px] -right-[3px] w-[10px] h-[10px] cursor-nwse-resize bg-green-500 z-[99999] "
+            className="hidden absolute group-hover:block -top-[3px] -right-[3px] w-[7px] h-[7px] cursor-nwse-resize bg-green-500 z-[99999] "
           ></div>
           <div
             onMouseDown={() => info.resizeElement(exId, info)}
-            className="hidden absolute group-hover:block -bottom-[3px] -left-[3px] w-[10px] h-[10px] cursor-nwse-resize bg-green-500 z-[99999] "
+            className="hidden absolute group-hover:block -bottom-[3px] -left-[3px] w-[7px] h-[7px] cursor-nwse-resize bg-green-500 z-[99999] "
           ></div>
         </>
       ) : (
         <>
           <div
             onMouseDown={() => info.resizeElement(id, info)}
-            className="hidden absolute group-hover:block -bottom-[3px] -right-[3px] w-[10px] h-[10px] cursor-nwse-resize bg-gray-500 z-[99999] "
+            className="hidden absolute group-hover:block -bottom-[3px] -right-[3px] w-[7px] h-[7px] cursor-nwse-resize bg-gray-500 z-[99999] "
           ></div>
           <div
             onMouseDown={() => info.resizeElement(id, info)}
@@ -38,7 +38,7 @@ const Element = ({ id, info, exId }) => {
       )}
       <div
         onMouseDown={() => info.rotateElement(id, info)}
-        className="hidden absolute group-hover:block -top-[3px] -left-[3px] w-[10px] h-[10px] cursor-[url(https://cdn-icons-png.flaticon.com/512/3818/3818260.png), auto] bg-pink-500 z-[99999] "
+        className="hidden absolute group-hover:block -top-[3px] -left-[3px] w-[7px] h-[7px] cursor-[url(https://cdn-icons-png.flaticon.com/512/3818/3818260.png), auto] bg-pink-500 z-[99999] "
       ></div>
 
       <div
