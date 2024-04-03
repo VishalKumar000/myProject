@@ -155,7 +155,8 @@ const CreateComponente = ({ info, current_component, removeComponent }) => {
         {current_component.id === info.id && (
           <div
             onClick={() => removeComponent(info.id)}
-            className="px-3 py-2 bg-white absolute top-0 hidden group-hover:block cursor-pointer rounded-md"
+            className="px-3 py-2 bg-transparent absolute top-[10%] left-[-12%] text-sm hidden group-hover:block cursor-pointer rounded-md"
+            style={{ transform: "translate(-50%, -50%)" }}
           >
             <BsTrash />
           </div>
